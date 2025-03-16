@@ -8,49 +8,47 @@ This directory contains design documentation for the MyDivinations project.
 - `user-flows.md` - User flows and journey documentation (planned)
 - `ui-components.md` - UI component specifications (planned)
 
-## Design System Overview
+## Design Status
 
-The MyDivinations design system is built around the following principles:
+The design documentation in this directory is currently in planning stage only. Implementation of frontend components has been postponed until the backend services are more mature.
 
-1. **Minimalist Interface** - Focused on content, reducing visual noise
-2. **Symbolic Representation** - Using visual symbols to convey archetypal meaning
+## Design Principles
+
+The MyDivinations design system will be built around the following principles:
+
+1. **Minimalist Interface** - Focus on content, reducing visual noise
+2. **Symbolic Representation** - Use visual symbols to convey archetypal meaning
 3. **Cosmic Palette** - Color scheme inspired by celestial elements
 4. **Responsive Design** - Mobile-first approach with adaptive layouts
 5. **Accessibility** - WCAG 2.1 Level AA compliance
 
-## Current Design Documents
+## Current Status
 
-The detailed design system documentation is currently available in:
-- `/GameDesign/Implementation/Design_System.md` - Comprehensive design guidelines
-- `/GameDesign/UX/Web_User_Onboarding_Flow.md` - User onboarding flow
+Design documentation is in planning stage only. Design implementation will begin after key backend functionality is in place.
 
-## Color Palette
+## Future Documentation
 
-- **Primary**: Deep Indigo (`#3730A3`) - Consciousness and insight
-- **Secondary**: Teal (`#0D9488`) - Growth and transformation
-- **Accent**: Dark Orange (`#C2410C`) - For important elements
+When frontend development begins, the following will be addressed:
+
+### Color Palette
+- **Primary**: Deep Indigo - Consciousness and insight
+- **Secondary**: Teal - Growth and transformation
+- **Accent**: Dark Orange - For important elements
 - **Neutrals**: Various shades from nearly white to deep charcoal
 
-## Typography
-
+### Typography
 - **Headings**: Raleway
 - **Body**: Inter
 - **Accent/Quotes**: Playfair Display
 
-## Component Design Approach
-
-Components follow these design principles:
-1. **Atomic Design Methodology** - Building from atoms to organisms
-2. **Consistent Interaction Patterns** - Predictable user interactions
-3. **Progressive Enhancement** - Core functionality works everywhere
-4. **Visual Hierarchy** - Clear importance relationships between elements
-5. **Motion with Purpose** - Animation that enhances understanding
-
-## Migration Plan
-
-As part of the documentation reorganization, the current design documents will be migrated to this directory with standardized formatting.
+### Component Design Approach
+- **Atomic Design Methodology** - Building from atoms to organisms
+- **Consistent Interaction Patterns** - Predictable user interactions
+- **Progressive Enhancement** - Core functionality works everywhere
+- **Visual Hierarchy** - Clear importance relationships between elements
+- **Motion with Purpose** - Animation that enhances understanding
 
 ---
 
-*Last Updated: March 17, 2025 | 09:55 PST*  
+*Last Updated: March 17, 2025 | 10:10 PST*  
 *MyDiv RIO*
