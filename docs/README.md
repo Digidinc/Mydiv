@@ -13,9 +13,9 @@ This documentation structure follows the plan outlined in [/coordination/DOC_ORG
 - Technical decisions
 
 ### Design Documentation
-- User experience specifications
-- Interface designs
-- Component visual guidelines
+- Planning documentation for future user experience
+- Interface design guidelines
+- Component visual specifications
 
 ### Development Guidelines
 - Coding standards
@@ -31,6 +31,10 @@ This documentation structure follows the plan outlined in [/coordination/DOC_ORG
 - Environment configurations
 - CI/CD pipelines
 - Monitoring approaches
+
+## Current Documentation Focus
+
+The current focus is on backend documentation, with frontend documentation in planning stage only. The implementation of frontend components has been postponed until the backend services are more mature.
 
 ## Contributing to Documentation
 
@@ -50,5 +54,5 @@ For current project status, see [/coordination/STATUS.md](/coordination/STATUS.m
 
 ---
 
-*Last Updated: March 17, 2025 | 09:45 PST*  
+*Last Updated: March 17, 2025 | 10:00 PST*  
 *MyDiv RIO*
