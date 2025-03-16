@@ -1,17 +1,15 @@
 # MyDivinations Project
 
 ## Overview
-MyDivinations is a comprehensive platform for astrological analysis and archetypal mapping. The project follows a microservices architecture with a Next.js frontend and various specialized backend services.
+MyDivinations is a comprehensive platform for astrological analysis and archetypal mapping. The project follows a microservices architecture with backend services and planned frontend components.
 
 ## Repository Structure
 - `/services` - Backend microservices
-- `/web` - Next.js web application
 - `/coordination` - Project coordination documents
 - `/docs` - Project documentation
 
 ## Team Roles
 - Backend Development: FastAPI microservices
-- Frontend Development: Next.js application
 - DevOps: Docker, CI/CD, deployment
 - AI Integration: LLM integration, vector embeddings
 
@@ -39,21 +37,22 @@ MyDivinations is a comprehensive platform for astrological analysis and archetyp
    - Tech Stack: Python, FastAPI, PostgreSQL
    - Status: Planning phase
 
-### Web Application
-1. **Next.js Frontend** 🔄 Planning
+### Future Components (Planned)
+1. **Web Application**
    - Description: User interface for the platform
    - Tech Stack: Next.js, TypeScript, Tailwind CSS
-   - Status: Planning phase
+   - Status: Documentation and planning phase
+   - Implementation: Scheduled after backend services mature
 
-2. **Admin Dashboard** 🔄 Planning
-   - Description: Administrative interface
-   - Tech Stack: Next.js, TypeScript, Tailwind CSS
+2. **Unity Integration**
+   - Description: Mobile application for interactive experiences
+   - Tech Stack: Unity, C#
    - Status: Planning phase
+   - Implementation: Planned for Q3 2025
 
 ## Prerequisites
 - Docker and Docker Compose
 - PostgreSQL 15+
-- Node.js 18+
 - Python 3.9+
 - Redis 7.2+
 
@@ -65,11 +64,12 @@ MyDivinations is a comprehensive platform for astrological analysis and archetyp
 
 ## Current Focus
 - Implementing Swiss Ephemeris integration in the astrology-engine service
-- Setting up the Next.js web application infrastructure
 - Defining the data models for the archetypal mapping service
+- Improving project documentation structure
+- Establishing CI/CD pipelines for backend services
 
-For detailed information about database configuration and available services, please refer to the root README.md file in the repository.
+For detailed information about project status, refer to the `/coordination/STATUS.md` file.
 
 ---
 
-*Last Updated: March 16, 2025*
+*Last Updated: March 17, 2025*
