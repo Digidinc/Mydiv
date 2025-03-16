@@ -1,0 +1,127 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something isn't working as expected"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "New feature or improvement"
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Documentation updates or additions"
+  },
+  {
+    "name": "infrastructure",
+    "color": "fbca04",
+    "description": "CI/CD, deployment, and repository setup"
+  },
+  {
+    "name": "refactoring",
+    "color": "d4c5f9",
+    "description": "Code improvements without functional changes"
+  },
+  {
+    "name": "security",
+    "color": "b60205",
+    "description": "Security-related issues or improvements"
+  },
+  {
+    "name": "performance",
+    "color": "1d76db",
+    "description": "Performance-related improvements"
+  },
+  {
+    "name": "astrology-engine",
+    "color": "5319e7",
+    "description": "Related to the Astrology Engine Service"
+  },
+  {
+    "name": "api-gateway",
+    "color": "5319e7",
+    "description": "Related to the API Gateway"
+  },
+  {
+    "name": "archetypal-mapping",
+    "color": "5319e7",
+    "description": "Related to the Archetypal Mapping Service"
+  },
+  {
+    "name": "content-generation",
+    "color": "5319e7",
+    "description": "Related to the Content Generation Service"
+  },
+  {
+    "name": "fractal-visualization",
+    "color": "5319e7",
+    "description": "Related to the Fractal Visualization Service"
+  },
+  {
+    "name": "audio-generation",
+    "color": "5319e7",
+    "description": "Related to the Audio Generation Service"
+  },
+  {
+    "name": "priority-high",
+    "color": "d93f0b",
+    "description": "Urgent issues requiring immediate attention"
+  },
+  {
+    "name": "priority-medium",
+    "color": "fbca04",
+    "description": "Important but not urgent issues"
+  },
+  {
+    "name": "priority-low",
+    "color": "0e8a16",
+    "description": "Issues that can be addressed later"
+  },
+  {
+    "name": "ai-ceo",
+    "color": "c5def5",
+    "description": "Requires AI CEO attention"
+  },
+  {
+    "name": "bea",
+    "color": "c5def5",
+    "description": "Requires Backend Architect attention"
+  },
+  {
+    "name": "gd",
+    "color": "c5def5",
+    "description": "Requires Game Designer attention"
+  },
+  {
+    "name": "cursor",
+    "color": "c5def5",
+    "description": "Implementation task for Cursor AI"
+  },
+  {
+    "name": "rio",
+    "color": "c5def5",
+    "description": "Repository or workflow management task"
+  },
+  {
+    "name": "question",
+    "color": "d876e3",
+    "description": "Questions needing answers"
+  },
+  {
+    "name": "help-wanted",
+    "color": "008672",
+    "description": "Extra attention is needed"
+  },
+  {
+    "name": "blocked",
+    "color": "e99695",
+    "description": "Blocked by another issue or dependency"
+  },
+  {
+    "name": "wontfix",
+    "color": "ffffff",
+    "description": "This will not be worked on"
+  }
+]
