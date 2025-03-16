@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  astrology-engine:
+    build: .
+    container_name: astrology-engine
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./src:/app/src
+      - ./ephe:/app/ephe
+    environment:
+      - DEBUG=True
+      - LOG_LEVEL=debug
+      - REDIS_URL=redis://redis:6379/0
+      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8000
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - mydiv-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
+  redis:
+    image: redis:6-alpine
+    container_name: astrology-engine-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    networks:
+      - mydiv-network
+
+volumes:
+  redis-data:
+
+networks:
+  mydiv-network:
+    driver: bridge
