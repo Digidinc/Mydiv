@@ -2,54 +2,68 @@
 
 The Astrology Engine Service provides accurate astrological calculations using Swiss Ephemeris as its foundation. It serves as the primary data source for archetypal mapping, supplying planetary positions, aspects, and other astrological data needed for personalized user experiences throughout the MyDivinations platform.
 
-## Features
+## Current Implementation Status
 
-- Calculate precise natal charts from birth date, time, and location data
-- Determine planetary positions, aspects, houses, and other astrological elements
-- Calculate transits, progressions, and other time-based astrological data
-- Provide dominant elements and modalities analysis for archetypal mapping
-- Support multiple house systems with Placidus as the primary default
+The service is currently in its initial setup phase with the following components implemented:
+
+- Basic FastAPI application structure
+- Health check endpoint (`/health`)
+- Welcome endpoint (`/`)
+- Docker containerization
+- Redis integration
+- Basic project structure
 
 ## Tech Stack
 
-- **Framework**: FastAPI
-- **Language**: Python 3.9+
-- **Database**: None (stateless service)
+- **Framework**: FastAPI (0.109.1)
+- **Language**: Python 3.9
+- **Cache**: Redis 7.2
 - **Core Libraries**:
+  - FastAPI
+  - Uvicorn[standard]
+  - Pydantic
+  - Redis
+- **Future Dependencies**:
   - pyswisseph (Python wrapper for Swiss Ephemeris)
-  - Pydantic (for data validation)
   - NumPy (for numerical operations)
   - GeoPy (for geocoding)
-- **External Dependencies**:
-  - Swiss Ephemeris ephemeris data files
 
 ## API Endpoints
 
-### Birth Chart Calculation
+### Currently Implemented
+
+```
+GET /health
+```
+Health check endpoint that returns service status
+
+```
+GET /
+```
+Welcome endpoint that returns a greeting message
+
+### Planned Endpoints
+
 ```
 POST /birth_chart
 ```
 Calculate a complete natal chart from birth information
 
-### Planetary Positions
 ```
 GET /planets
 ```
 Get positions of specific planets at a given date and time
 
-### Aspects Calculation
 ```
 POST /aspects
 ```
 Calculate aspects between planets
 
-### Transits Calculation
 ```
 POST /transits
 ```
 Calculate current transits to natal chart
 
-### Progressions Calculation
 ```
 POST /progressions
 ```
@@ -59,133 +73,97 @@ Calculate progressed chart positions
 
 ### Prerequisites
 - Python 3.9+
-- Docker and Docker Compose (for containerized development)
-- Swiss Ephemeris data files
+- Docker and Docker Compose
+- Swiss Ephemeris data files (for future implementation)
 
 ### Local Development
 
 1. Clone the repository:
-```
+```bash
 git clone https://github.com/Digidinc/Mydiv.git
 cd Mydiv/services/astrology-engine
 ```
 
 2. Create a virtual environment:
-```
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
-```
+```bash
 pip install -r requirements.txt
 ```
 
 4. Create .env file:
-```
+```bash
 cp .env.example .env
 ```
 
 5. Run the development server:
-```
+```bash
 uvicorn src.main:app --reload
 ```
 
 ### Using Docker
 
-1. Build and start the container:
-```
-docker-compose up -d
+1. Build and start the containers:
+```bash
+docker-compose up -d --build
 ```
 
 2. View logs:
-```
+```bash
 docker-compose logs -f
 ```
 
-3. Stop the container:
-```
+3. Stop the containers:
+```bash
 docker-compose down
 ```
 
-## Project Structure
+## Current Project Structure
 
 ```
 /astrology-engine/
 ├── src/
-│   ├── api/                # API endpoints
-│   │   ├── __init__.py
-│   │   ├── birth_chart.py  # Birth chart endpoints
-│   │   ├── planets.py      # Planetary position endpoints
-│   │   ├── aspects.py      # Aspect calculation endpoints
-│   │   ├── transits.py     # Transit calculation endpoints
-│   │   └── progressions.py # Progression calculation endpoints
-│   ├── core/               # Core calculation engine
-│   │   ├── __init__.py
-│   │   ├── ephemeris.py    # Ephemeris provider interface
-│   │   ├── calculator.py   # Main calculation service
-│   │   ├── aspects.py      # Aspect calculation
-│   │   └── coordinates.py  # Coordinate transformations
-│   ├── models/             # Data models
-│   │   ├── __init__.py
-│   │   ├── birth_data.py   # Birth data models
-│   │   ├── chart.py        # Chart data models
-│   │   ├── planets.py      # Planetary data models
-│   │   └── aspects.py      # Aspect data models
-│   ├── services/           # Business logic services
-│   │   ├── __init__.py
-│   │   ├── birth_chart.py  # Birth chart service
-│   │   ├── transit.py      # Transit service
-│   │   └── progression.py  # Progression service
-│   ├── utils/              # Utility functions
-│   │   ├── __init__.py
-│   │   ├── date.py         # Date handling utilities
-│   │   ├── logging.py      # Logging configuration
-│   │   └── errors.py       # Error handling utilities
-│   ├── config.py           # Configuration management
-│   └── main.py             # Application entry point
-├── tests/                  # Test suite
-│   ├── unit/               # Unit tests
-│   ├── integration/        # Integration tests
-│   └── fixtures/           # Test fixtures
-├── docs/                   # Service-specific documentation
-├── Dockerfile              # Container definition
-├── docker-compose.yml      # Local development setup
-├── requirements.txt        # Python dependencies
-├── requirements-dev.txt    # Development dependencies
-├── .env.example            # Example environment variables
-└── README.md               # Service documentation
+│   └── main.py             # Application entry point with basic endpoints
+├── ephe/                   # Directory for ephemeris data files
+├── Dockerfile             # Container definition
+├── docker-compose.yml     # Container orchestration
+├── requirements.txt       # Python dependencies
+├── .env                   # Environment variables
+└── README.md             # Service documentation
+```
+
+## Environment Variables
+
+The following environment variables are currently used:
+
+```
+REDIS_URL=redis://redis:6379/0
 ```
 
 ## Testing
 
-Run the test suite:
-```
-pytest
-```
-
-Run with coverage:
-```
-pytest --cov=src
-```
+The service includes basic health checks in the Docker configuration. More comprehensive testing will be implemented as the service grows.
 
 ## Documentation
 
-API documentation is available at `/docs` when the service is running.
+API documentation will be available at `/docs` when the service is running (Swagger UI).
 
-## Performance Considerations
+## Next Steps
 
-- Birth chart calculations are cached to avoid recalculation
-- Planetary positions for common dates are cached
-- Computation-heavy operations are optimized
-
-## References
-
-- [Swiss Ephemeris Documentation](https://www.astro.com/swisseph/swephinfo_e.htm)
-- [PySwissEph Documentation](https://github.com/astrorigin/pyswisseph)
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+1. Implement Swiss Ephemeris integration
+2. Add birth chart calculation endpoints
+3. Implement planetary position calculations
+4. Add aspect calculation functionality
+5. Implement transit and progression calculations
+6. Add comprehensive test suite
+7. Implement caching strategy with Redis
+8. Add proper error handling and validation
 
 ---
 
-*Last Updated: March 15, 2025 | 22:45 PST*  
+*Last Updated: March 16, 2025 | 06:55 UTC*  
 *Maintained by: MyDiv BEA (Backend Architect)*
