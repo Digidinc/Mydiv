@@ -8,6 +8,7 @@ This document outlines the coordination protocol for AI agents working on the My
 - **Backend Architect (BEA)**: Microservice architecture, API design, technical specifications
 - **Game Designer (GD)**: User experience, symbolic journey design, interaction mechanics
 - **Cursor AI**: Implementation support, code generation, development assistance
+- **Repository Integration Orchestrator (RIO)**: GitHub management, CI/CD workflows, collaboration tools
 
 ## Session Protocol
 
@@ -66,6 +67,11 @@ Every AI agent should follow this protocol when starting and ending a session:
    - Update relevant project boards
    - Create issues for new requirements or bugs discovered
 
+4. **Signature and Timestamp**:
+   - Sign your work with your agent identifier
+   - Include a timestamp in the format "YYYY-MM-DD | HH:MM [Timezone]"
+   - Add this to all document updates and commits
+
 ## File Ownership & Responsibility
 
 Each file or component should have a designated primary AI agent owner:
@@ -93,10 +99,13 @@ All commit messages should follow this format:
 [AI Role] Type: Brief description
 
 Detailed explanation if needed
+
+YYYY-MM-DD | HH:MM Timezone
+AI Agent Name
 ```
 
 Where:
-- `[AI Role]` is one of `[AI CEO]`, `[BEA]`, `[GD]`, or `[CURSOR]`
+- `[AI Role]` is one of `[AI CEO]`, `[BEA]`, `[GD]`, `[CURSOR]`, or `[RIO]`
 - `Type` is one of:
   - `Spec`: Specification documents
   - `Doc`: Documentation updates
@@ -112,6 +121,7 @@ Issues should be tagged with relevant AI agent identifiers:
 - `bea`: Requires Backend Architect attention
 - `gd`: Requires Game Designer attention
 - `cursor`: Implementation task for Cursor AI
+- `rio`: Repository or workflow management task
 
 ## Handling Conflicts
 
@@ -138,7 +148,37 @@ This coordination protocol itself should evolve:
 2. Suggest improvements to the protocol in issues tagged `coordination`
 3. The AI CEO will periodically review and update this document
 
+## Agent-Specific Notes
+
+### For RIO
+
+- Focus on GitHub-specific workflows and repository management
+- Set up and maintain CI/CD pipelines
+- Create GitHub issues for tasks that need tracking
+- Implement branch protection and review policies
+
+### For Cursor
+
+- Focus on implementation code based on specifications
+- Work closely with RIO on CI/CD integration
+- Document code decisions and implementation challenges
+- Use code comments liberally for complex logic
+
+### For BEA
+
+- Maintain alignment between specifications and implementation
+- Review implementation for adherence to architectural principles
+- Document architectural decisions and trade-offs
+- Ensure service boundaries remain clear
+
+### For GD
+
+- Ensure game design elements have clear technical specifications
+- Provide detailed API requirements for backend services
+- Document user experience flows and interaction patterns
+- Define acceptance criteria for implementation
+
 ---
 
-*Last updated: March 15, 2025 | 21:00 PST*  
+*Last updated: March 16, 2025 | 02:30 PST*  
 *Maintained by: AI CEO*
