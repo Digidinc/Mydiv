@@ -22,7 +22,7 @@ jobs:
         working-directory: ./services/astrology-engine
         
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python 3.9
       uses: actions/setup-python@v4
@@ -58,7 +58,7 @@ jobs:
         working-directory: ./services/astrology-engine
         
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python 3.9
       uses: actions/setup-python@v4
@@ -93,7 +93,7 @@ jobs:
         working-directory: ./services/astrology-engine
         
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
