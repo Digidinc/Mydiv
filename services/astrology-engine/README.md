@@ -6,12 +6,23 @@ The Astrology Engine Service provides accurate astrological calculations using S
 
 The service is currently in its initial setup phase with the following components implemented:
 
-- Basic FastAPI application structure
-- Health check endpoint (`/health`)
-- Welcome endpoint (`/`)
-- Docker containerization
-- Redis integration
-- Basic project structure
+✅ Basic FastAPI application structure
+✅ Health check endpoint (`/health`)
+✅ Welcome endpoint (`/`)
+✅ Docker containerization
+✅ Redis integration
+✅ Basic project structure
+✅ Initial documentation
+
+🔄 Planned Features:
+- Swiss Ephemeris integration
+- Birth chart calculations
+- Planetary positions
+- Aspects calculations
+- Transits and progressions
+- Comprehensive test suite
+- Redis caching implementation
+- Error handling and validation
 
 ## Tech Stack
 
@@ -32,42 +43,69 @@ The service is currently in its initial setup phase with the following component
 
 ### Currently Implemented
 
-```
+```http
 GET /health
 ```
 Health check endpoint that returns service status
-
+```json
+{
+    "status": "healthy"
+}
 ```
+
+```http
 GET /
 ```
 Welcome endpoint that returns a greeting message
+```json
+{
+    "message": "Welcome to Astrology Engine API"
+}
+```
 
 ### Planned Endpoints
 
-```
+```http
 POST /birth_chart
 ```
 Calculate a complete natal chart from birth information
 
-```
+```http
 GET /planets
 ```
 Get positions of specific planets at a given date and time
 
-```
+```http
 POST /aspects
 ```
 Calculate aspects between planets
 
-```
+```http
 POST /transits
 ```
 Calculate current transits to natal chart
 
-```
+```http
 POST /progressions
 ```
 Calculate progressed chart positions
+
+## Project Structure
+
+```
+/astrology-engine/
+├── src/
+│   └── main.py             # Application entry point with basic endpoints
+├── ephe/                   # Directory for ephemeris data files
+├── docs/                   # Documentation
+│   ├── setup.md           # Detailed setup guide
+│   └── api.md             # API documentation
+├── Dockerfile             # Container definition
+├── docker-compose.yml     # Container orchestration
+├── requirements.txt       # Python dependencies
+├── .env                   # Environment variables
+└── README.md             # Service documentation
+```
 
 ## Development Setup
 
@@ -75,35 +113,6 @@ Calculate progressed chart positions
 - Python 3.9+
 - Docker and Docker Compose
 - Swiss Ephemeris data files (for future implementation)
-
-### Local Development
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Digidinc/Mydiv.git
-cd Mydiv/services/astrology-engine
-```
-
-2. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Create .env file:
-```bash
-cp .env.example .env
-```
-
-5. Run the development server:
-```bash
-uvicorn src.main:app --reload
-```
 
 ### Using Docker
 
@@ -122,23 +131,35 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## Current Project Structure
+### Local Development
 
+1. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
-/astrology-engine/
-├── src/
-│   └── main.py             # Application entry point with basic endpoints
-├── ephe/                   # Directory for ephemeris data files
-├── Dockerfile             # Container definition
-├── docker-compose.yml     # Container orchestration
-├── requirements.txt       # Python dependencies
-├── .env                   # Environment variables
-└── README.md             # Service documentation
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Start Redis:
+```bash
+docker run -d -p 6379:6379 redis:7.2-alpine
+```
+
+4. Set environment variables:
+```bash
+export REDIS_URL=redis://localhost:6379/0
+```
+
+5. Run the development server:
+```bash
+uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ## Environment Variables
-
-The following environment variables are currently used:
 
 ```
 REDIS_URL=redis://redis:6379/0
@@ -150,7 +171,9 @@ The service includes basic health checks in the Docker configuration. More compr
 
 ## Documentation
 
-API documentation will be available at `/docs` when the service is running (Swagger UI).
+- [Setup Guide](docs/setup.md) - Detailed setup instructions
+- [API Documentation](docs/api.md) - API endpoint documentation
+- Swagger UI Documentation - Available at `/docs` when the service is running
 
 ## Next Steps
 
@@ -165,5 +188,5 @@ API documentation will be available at `/docs` when the service is running (Swag
 
 ---
 
-*Last Updated: March 16, 2025 | 06:55 UTC*  
+*Last Updated: March 16, 2025 | 07:10 UTC*  
 *Maintained by: MyDiv BEA (Backend Architect)*
