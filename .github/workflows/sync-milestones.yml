@@ -1,0 +1,90 @@
+name: Sync Milestones
+
+on:
+  push:
+    paths:
+      - '.github/milestones.json'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync-milestones:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Install dependencies
+        run: npm install @octokit/rest
+      
+      - name: Sync Milestones
+        run: |
+          node -e '
+          const { Octokit } = require("@octokit/rest");
+          const fs = require("fs");
+          
+          const octokit = new Octokit({
+            auth: process.env.GITHUB_TOKEN
+          });
+          
+          const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
+          const milestones = JSON.parse(fs.readFileSync(".github/milestones.json", "utf8"));
+          
+          async function syncMilestones() {
+            try {
+              // Get existing milestones
+              const { data: existingMilestones } = await octokit.issues.listMilestones({
+                owner,
+                repo,
+                state: "all"
+              });
+              
+              // Create or update milestones
+              for (const milestone of milestones) {
+                const existingMilestone = existingMilestones.find(
+                  m => m.title === milestone.title
+                );
+                
+                if (existingMilestone) {
+                  console.log(`Updating milestone: ${milestone.title}`);
+                  await octokit.issues.updateMilestone({
+                    owner,
+                    repo,
+                    milestone_number: existingMilestone.number,
+                    title: milestone.title,
+                    description: milestone.description,
+                    due_on: milestone.due_on
+                  });
+                } else {
+                  console.log(`Creating milestone: ${milestone.title}`);
+                  await octokit.issues.createMilestone({
+                    owner,
+                    repo,
+                    title: milestone.title,
+                    description: milestone.description,
+                    due_on: milestone.due_on
+                  });
+                }
+              }
+              
+              console.log("Milestone synchronization completed successfully.");
+            } catch (error) {
+              console.error("Error syncing milestones:", error);
+              process.exit(1);
+            }
+          }
+          
+          syncMilestones();
+          '
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
