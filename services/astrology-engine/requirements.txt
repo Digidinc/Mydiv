@@ -12,7 +12,7 @@ aioredis==2.0.1
 
 # HTTP and networking
 httpx==0.25.2
-pydantic-settings==2.1.0
+pydantic-settings==2.8.1
 
 # Serialization
 ujson==5.8.0
