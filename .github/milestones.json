@@ -1,0 +1,22 @@
+[
+  {
+    "title": "MVP Phase 1",
+    "description": "Core infrastructure and Astrology Engine Service",
+    "due_on": "2025-04-01T00:00:00Z"
+  },
+  {
+    "title": "MVP Phase 2",
+    "description": "Archetypal Mapping and basic visualization",
+    "due_on": "2025-04-15T00:00:00Z"
+  },
+  {
+    "title": "MVP Phase 3",
+    "description": "Content generation and user experience",
+    "due_on": "2025-05-01T00:00:00Z"
+  },
+  {
+    "title": "Beta Release",
+    "description": "Production-ready implementation",
+    "due_on": "2025-05-15T00:00:00Z"
+  }
+]
