@@ -35,22 +35,29 @@ This index provides a centralized navigation system for all Path of Symbols desi
    - Integration with astrological and journal systems
    - Implementation approach and algorithms
 
-## Supporting Documents
+## Implementation Documents
+
+1. [**Revised Implementation Priorities**](Revised_Implementation_Priorities.md)
+   - Updated approach emphasizing core journey first
+   - Phased implementation schedule
+   - Benefits of focusing on symbolic journey before fractal visualization
+
+2. [**Letter to Essi (Unity Developer) - Revised**](Letter_to_Essi_Unity_Developer_Revised.md)
+   - Updated implementation tasks with revised sequence
+   - Phase-based approach starting with core journey
+   - Rationale for the revised approach
+
+3. [**Letter to Essi (Unity Developer) - Original**](Letter_to_Essi_Unity_Developer.md) *(Superseded)*
+   - Initial implementation tasks (no longer current)
+   - Original technical considerations still applicable
+   - Preserved for reference purposes
+
+## Analysis Documents
 
 1. [**Alignment Analysis and Next Steps**](Alignment_Analysis_and_Next_Steps.md)
    - Analysis of alignment with broader project
    - Identified areas for further integration
    - Next steps with priorities and timelines
-
-2. [**Letter to Essi (Unity Developer)**](Letter_to_Essi_Unity_Developer.md)
-   - Implementation tasks with priorities
-   - Technical considerations for Unity development
-   - Collaboration process and timeline
-
-3. [**Revised Implementation Priorities**](Revised_Implementation_Priorities.md)
-   - Updated approach emphasizing core journey first
-   - Phased implementation schedule
-   - Benefits of focusing on symbolic journey before fractal visualization
 
 ## Document Relationships
 
@@ -72,12 +79,16 @@ This index provides a centralized navigation system for all Path of Symbols desi
                       │ Integration     │
                       └────────┬────────┘
                                │
-                ┌──────────────┴──────────────┐
-                │                             │
-                ▼                             ▼
+                               ▼
+                      ┌─────────────────┐
+                      │ Implementation   │
+                      │ Documents        │
+                      └────────┬────────┘
+                               │
+                               ▼
        ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-       │ Alignment       │       │ Letter to       │       │ Revised        │
-       │ Analysis        │       │ Unity Developer │       │ Implementation  │
+       │ Alignment       │       │ Revised        │       │ Developer      │
+       │ Analysis        │       │ Implementation  │       │ Letters         │
        └─────────────────┘       └─────────────────┘       └─────────────────┘
 ```
 
@@ -87,10 +98,10 @@ This index provides a centralized navigation system for all Path of Symbols desi
 Start with the Symbol Library and Decision Tree documents to understand the core symbolic system and journey structure. Then review the Interaction Mechanics and Fractal Response System to understand the user experience design.
 
 ### For Unity Developers
-Begin with the **Revised Implementation Priorities** document for the updated implementation approach, then review the Letter to Essi document. Focus on implementing the core journey structure before moving to the more complex fractal visualization system.
+Begin with the **Revised Implementation Priorities** document and the updated **Letter to Essi** for the current implementation approach. Focus on implementing the core journey structure before moving to the more complex fractal visualization system.
 
 ### For Backend Developers
-Focus on the Archetypal Integration Guidelines to understand how the Path of Symbols integrates with backend services and user profiles.
+Focus on the Archetypal Integration Guidelines to understand how the Path of Symbols integrates with backend services and user profiles. Review Phase 3 of the Revised Implementation Priorities to understand the timing of backend integration needs.
 
 ### For Project Managers
 Review the Alignment Analysis and Revised Implementation Priorities documents to understand how this feature fits into the broader project context and the implementation roadmap.
