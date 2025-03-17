@@ -1,14 +1,19 @@
 # Path of Symbols Design Documentation
 
+[← Back to Document Index](00_Document_Index.md)
+
 This directory contains the comprehensive design documentation for the Path of Symbols mini-game, a core feature of the MyDivinations MVP. The Path of Symbols provides users with an interactive symbolic journey that responds to their choices, helping them discover personal archetypal patterns.
 
 ## Directory Structure
 
-- **Symbol_Library_Documentation.md**: Comprehensive catalog of all symbols used in the game
-- **Path_of_Symbols_Decision_Tree.md**: Complete decision tree structure with all possible paths
-- **Path_of_Symbols_Interaction_Mechanics.md**: Detailed interaction patterns and user experience design
-- **Fractal_Response_System.md**: Specifications for the fractal visualization system
-- **Archetypal_Integration_Guidelines.md**: Guidelines for integrating with user's archetypal profile
+- [**00_Document_Index.md**](00_Document_Index.md): Central navigation system with links to all documents
+- [**Symbol_Library_Documentation.md**](Symbol_Library_Documentation.md): Comprehensive catalog of all symbols used in the game
+- [**Path_of_Symbols_Decision_Tree.md**](Path_of_Symbols_Decision_Tree.md): Complete decision tree structure with all possible paths
+- [**Path_of_Symbols_Interaction_Mechanics.md**](Path_of_Symbols_Interaction_Mechanics.md): Detailed interaction patterns and user experience design
+- [**Fractal_Response_System_Part1.md**](Fractal_Response_System_Part1.md): Specifications for the fractal visualization system
+- [**Archetypal_Integration_Guidelines_Part1.md**](Archetypal_Integration_Guidelines_Part1.md): Guidelines for integrating with user's archetypal profile
+- [**Alignment_Analysis_and_Next_Steps.md**](Alignment_Analysis_and_Next_Steps.md): Analysis of alignment with broader project
+- [**Letter_to_Essi_Unity_Developer.md**](Letter_to_Essi_Unity_Developer.md): Implementation tasks for Unity development
 
 ## Design Philosophy
 
