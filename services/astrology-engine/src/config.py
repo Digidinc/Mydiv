@@ -41,6 +41,17 @@ class Settings(BaseSettings):
     # Cache settings
     ENABLE_CACHE: bool = True
     
+    # Geocoding settings
+    GEOCODING_USER_AGENT: str = "mydivinations-astrology-engine"
+    GEOCODING_CACHE_TTL: int = 86400  # 24 hours
+    
+    # TimeZoneDB API settings
+    TIMEZONE_DB_API_KEY: str = ""  # Register at https://timezonedb.com for a free API key
+    
+    # Transit forecast settings
+    DEFAULT_FORECAST_YEARS: int = 5
+    DEFAULT_FORECAST_PLANETS: List[str] = ["jupiter", "saturn", "uranus", "neptune", "pluto"]
+    
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
 # Create settings instance
@@ -66,10 +77,14 @@ if settings.DEBUG:
 if settings.DEBUG:
     logger.debug("Application configuration:")
     for key, value in settings.model_dump().items():
-        if key not in ["API_KEY"]:
+        if key not in ["API_KEY", "TIMEZONE_DB_API_KEY"]:
             logger.debug(f"  {key}: {value}")
 
 # Validate Swiss Ephemeris path
 if not os.path.exists(settings.EPHEMERIS_PATH):
     logger.warning(f"Swiss Ephemeris path does not exist: {settings.EPHEMERIS_PATH}")
     logger.warning("Some calculations may fail or be inaccurate.")
+
+# Warn about missing TimeZoneDB API key
+if not settings.TIMEZONE_DB_API_KEY:
+    logger.warning("TimeZoneDB API key not set. Using fallback time zone determination.")
