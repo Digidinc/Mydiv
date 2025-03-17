@@ -2,6 +2,18 @@
 
 The Astrology Engine Service provides accurate astrological calculations using Swiss Ephemeris as its foundation. It serves as the primary data source for archetypal mapping, supplying planetary positions, aspects, and other astrological data needed for personalized user experiences throughout the MyDivinations platform.
 
+## 🤖 AI Collaboration Guide
+
+This project is designed for collaboration between human developers and AI coding assistants. If you're using Cursor AI or another AI coding assistant, please refer to our comprehensive [AI Collaboration Guide](docs/AI_COLLABORATION_GUIDE.md) which includes:
+
+- Project structure and organization
+- Coding standards and patterns
+- Common astrological calculations
+- Task examples with implementation patterns
+- Testing guidance with reference values
+
+The guide will help AI assistants understand how to effectively contribute to the codebase while maintaining consistency with project standards.
+
 ## Implementation Status
 
 The service has been significantly expanded from its initial setup and now offers comprehensive astrological calculations:
@@ -171,6 +183,8 @@ Calculate a progressed chart with current transits to both natal and progressed 
 │   └── main.py             # Application entry point
 ├── ephe/                   # Swiss Ephemeris data files
 ├── docs/                   # Documentation
+│   ├── AI_COLLABORATION_GUIDE.md  # Guide for AI assistants
+│   └── IMPLEMENTATION_SUMMARY.md  # Overview of implementation
 ├── Dockerfile              # Container definition
 ├── docker-compose.yml      # Container orchestration
 ├── requirements.txt        # Python dependencies
@@ -314,5 +328,5 @@ print(json.dumps(response.json(), indent=2))
 
 ---
 
-*Last Updated: March 17, 2025 | 01:10 UTC*  
+*Last Updated: March 17, 2025 | 01:25 UTC*  
 *Maintained by: MyDiv BEA (Backend Architect)*
