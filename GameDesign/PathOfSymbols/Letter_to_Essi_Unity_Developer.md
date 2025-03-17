@@ -1,5 +1,7 @@
 # Implementation Tasks for Path of Symbols: Unity Development
 
+[← Back to Document Index](00_Document_Index.md)
+
 Dear Essi,
 
 I hope this message finds you well. As the MyDiv Game Designer, I wanted to reach out regarding the implementation of the Path of Symbols mini-game that we'll be building for the MyDivinations application. I've recently completed the core design documentation for this feature, and I'd like to outline the key implementation tasks that will require your Unity development expertise.
@@ -8,11 +10,11 @@ I hope this message finds you well. As the MyDiv Game Designer, I wanted to reac
 
 Before diving into development, please review these design documents that provide comprehensive specifications for the Path of Symbols:
 
-1. **Symbol Library Documentation**: Defines all 50 symbols with meanings and interaction patterns
-2. **Path of Symbols Decision Tree**: Outlines the complete structure with 8 possible paths
-3. **Path of Symbols Interaction Mechanics**: Details user interaction patterns and feedback
-4. **Fractal Response System**: Specifies the fractal visualization implementation
-5. **Archetypal Integration Guidelines**: Explains how to adapt to user's archetypal profile
+1. [**Symbol Library Documentation**](Symbol_Library_Documentation.md): Defines all 50 symbols with meanings and interaction patterns
+2. [**Path of Symbols Decision Tree**](Path_of_Symbols_Decision_Tree.md) and [Part 2](Path_of_Symbols_Decision_Tree_Part2.md): Outlines the complete structure with 8 possible paths
+3. [**Path of Symbols Interaction Mechanics**](Path_of_Symbols_Interaction_Mechanics.md): Details user interaction patterns and feedback
+4. [**Fractal Response System**](Fractal_Response_System_Part1.md) and [Part 2](Fractal_Response_System_Part2.md): Specifies the fractal visualization implementation
+5. [**Archetypal Integration Guidelines**](Archetypal_Integration_Guidelines_Part1.md), [Part 2](Archetypal_Integration_Guidelines_Part2.md), and [Part 3](Archetypal_Integration_Guidelines_Part3.md): Explains how to adapt to user's archetypal profile
 
 All documents are now available in the `GameDesign/PathOfSymbols/` directory in our GitHub repository.
 
@@ -33,7 +35,7 @@ Based on these design documents, here are the key implementation tasks I believe
 
 **Timeline**: 2 weeks
 
-**Reference**: See `Fractal_Response_System.md` for detailed specifications
+**Reference**: See [Fractal_Response_System_Part1.md](Fractal_Response_System_Part1.md) and [Part 2](Fractal_Response_System_Part2.md) for detailed specifications
 
 ### 2. Symbol System Implementation (High Priority)
 
@@ -48,7 +50,7 @@ Based on these design documents, here are the key implementation tasks I believe
 
 **Timeline**: 2 weeks
 
-**Reference**: See `Symbol_Library_Documentation.md` for detailed specifications
+**Reference**: See [Symbol_Library_Documentation.md](Symbol_Library_Documentation.md) for detailed specifications
 
 ### 3. Decision Tree Navigation (Medium Priority)
 
@@ -63,7 +65,7 @@ Based on these design documents, here are the key implementation tasks I believe
 
 **Timeline**: 1.5 weeks
 
-**Reference**: See `Path_of_Symbols_Decision_Tree.md` for detailed specifications
+**Reference**: See [Path_of_Symbols_Decision_Tree.md](Path_of_Symbols_Decision_Tree.md) and [Part 2](Path_of_Symbols_Decision_Tree_Part2.md) for detailed specifications
 
 ### 4. User Interaction System (Medium Priority)
 
@@ -78,7 +80,7 @@ Based on these design documents, here are the key implementation tasks I believe
 
 **Timeline**: 1.5 weeks
 
-**Reference**: See `Path_of_Symbols_Interaction_Mechanics.md` for detailed specifications
+**Reference**: See [Path_of_Symbols_Interaction_Mechanics.md](Path_of_Symbols_Interaction_Mechanics.md) for detailed specifications
 
 ### 5. API Integration (Medium Priority)
 
@@ -93,7 +95,7 @@ Based on these design documents, here are the key implementation tasks I believe
 
 **Timeline**: 1 week
 
-**Reference**: See `Archetypal_Integration_Guidelines.md` for integration specifications
+**Reference**: See [Archetypal_Integration_Guidelines_Part1.md](Archetypal_Integration_Guidelines_Part1.md), [Part 2](Archetypal_Integration_Guidelines_Part2.md), and [Part 3](Archetypal_Integration_Guidelines_Part3.md) for integration specifications
 
 ## Technical Considerations
 
