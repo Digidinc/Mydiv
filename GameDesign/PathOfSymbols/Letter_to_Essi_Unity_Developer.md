@@ -1,5 +1,7 @@
 # Implementation Tasks for Path of Symbols: Unity Development
 
+> **IMPORTANT NOTE:** This letter has been superseded by the [Revised Letter to Essi](Letter_to_Essi_Unity_Developer_Revised.md) which reflects our updated implementation priorities. Please refer to the revised letter and the [Revised Implementation Priorities](Revised_Implementation_Priorities.md) document for the current implementation plan.
+
 [← Back to Document Index](00_Document_Index.md)
 
 Dear Essi,
