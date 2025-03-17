@@ -47,6 +47,11 @@ This index provides a centralized navigation system for all Path of Symbols desi
    - Technical considerations for Unity development
    - Collaboration process and timeline
 
+3. [**Revised Implementation Priorities**](Revised_Implementation_Priorities.md)
+   - Updated approach emphasizing core journey first
+   - Phased implementation schedule
+   - Benefits of focusing on symbolic journey before fractal visualization
+
 ## Document Relationships
 
 ```
@@ -70,10 +75,10 @@ This index provides a centralized navigation system for all Path of Symbols desi
                 ┌──────────────┴──────────────┐
                 │                             │
                 ▼                             ▼
-       ┌─────────────────┐           ┌─────────────────┐
-       │ Alignment       │           │ Letter to       │
-       │ Analysis        │           │ Unity Developer │
-       └─────────────────┘           └─────────────────┘
+       ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
+       │ Alignment       │       │ Letter to       │       │ Revised        │
+       │ Analysis        │       │ Unity Developer │       │ Implementation  │
+       └─────────────────┘       └─────────────────┘       └─────────────────┘
 ```
 
 ## How to Use This Documentation
@@ -82,13 +87,13 @@ This index provides a centralized navigation system for all Path of Symbols desi
 Start with the Symbol Library and Decision Tree documents to understand the core symbolic system and journey structure. Then review the Interaction Mechanics and Fractal Response System to understand the user experience design.
 
 ### For Unity Developers
-Begin with the Letter to Essi document for implementation priorities, then dive into the Fractal Response System and Interaction Mechanics for technical specifications. Reference the Symbol Library and Decision Tree as needed for content details.
+Begin with the **Revised Implementation Priorities** document for the updated implementation approach, then review the Letter to Essi document. Focus on implementing the core journey structure before moving to the more complex fractal visualization system.
 
 ### For Backend Developers
 Focus on the Archetypal Integration Guidelines to understand how the Path of Symbols integrates with backend services and user profiles.
 
 ### For Project Managers
-Review the Alignment Analysis and Next Steps document to understand how this feature fits into the broader project context and the upcoming tasks on the roadmap.
+Review the Alignment Analysis and Revised Implementation Priorities documents to understand how this feature fits into the broader project context and the implementation roadmap.
 
 ---
 
